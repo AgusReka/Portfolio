@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+}
+* {
+  background-color: #1e1f22;
+}
+
+@keyframes TitleEnter {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes LinksAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ImgEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes OpacityAnim {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateYs(0px);
+  }
+}
+@keyframes OpacityAnimNoMovement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes DisplayNoneBlock {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
+
+.Title  {
+  animation: OpacityAnim .5s ease;
+  position: relative;
+  border-bottom: 3px solid;
+  &:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120%;
+    left: -10%;
+    height: 5px;
+    background-color: white;
+  }
+} 

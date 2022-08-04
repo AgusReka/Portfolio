@@ -1,0 +1,153 @@
+@media only screen and (min-width: 1024px) {
+  //PC
+  .AboutMe {
+    .Text {
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  //Celular
+  .AboutMe {
+    .Text {
+      font-size: 15px;
+    }
+  }
+}
+.Projects {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  .Title {
+    margin-bottom: 30px;
+  }
+  .ProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+    .ProjectCard {
+      
+      border: 1px solid rgb(27, 27, 27);
+      box-shadow: 5px 5px 10px rgb(12, 12, 12);
+      border-radius: 10%;
+      width: 240px;
+      height: 240px;
+      background-color: rgb(53, 53, 53);
+      overflow: hidden;
+      position: relative;
+      
+      .HoverInfo {
+        opacity: 0;
+        
+        transition: .5s ease;
+        border-radius: 5%;
+        position: relative;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.589);
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        height: 100%;
+        width: 100%;
+        gap: 10px;
+        .ProjectTitle {
+          font-size: 20px;
+          background-color: transparent;
+          width: fit-content;
+          
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: white;
+          }
+          margin-bottom: 5px;
+        }
+        .ProjectDescription {
+          //border: 1px red solid;
+          font-size: 16px;
+          padding: 0 5px;
+          font-weight: 500;
+          background-color: transparent;
+        }
+        .Links{
+          transform: translateX(-500px);
+          //border: 1px solid red;
+          width: 100%;
+          gap: 5%;
+          display: flex;
+          background-color: transparent;
+          justify-content: center;
+          align-items: center;
+          a{
+            text-decoration: none;
+            display: flex;
+            background-color: transparent;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 50px;
+            background-color: rgb(53, 53, 53);
+            border: none;
+            padding: 1px;
+            border-radius: 20%;
+            box-shadow: 5px 5px 10px rgb(12, 12, 12);
+            h1{
+              color: white;
+              font-size: 15px;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      &:hover{
+        .HoverInfo{
+          .Links{
+            transition: .2s ease;
+            transform: translateX(0px);
+          }
+          opacity: 1;
+        }
+        .Images{
+          //border: 2px solid rgb(255, 0, 0);
+          filter: blur(2px);
+      }
+    }
+      .Images{
+        //border: 2px solid rgb(255, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        border-radius: 10%;
+        top: 0px;
+        left: 0px;
+        width: 120%;
+        transform: translateX(-20px);
+        height: 100%;
+        .imgOn{
+          animation: OpacityAnimNoMovement 2s forwards ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          background-color: transparent;
+          width: 200%;
+        }
+        .imgOff{
+          
+          width: 0%;
+        }
+      }
+    }
+  }
+}

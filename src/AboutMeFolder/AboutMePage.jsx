@@ -1,5 +1,5 @@
-import TecnologiaCard from './TecnologiaCard';
-import './AboutMeStyle.scss';
+import TecnologiaCard from "./TecnologiaCard";
+import "./AboutMeStyle.scss";
 function AboutMePage() {
   /*const [TecnologiaCard, setTecnologiaCard] = useState(true);
 
@@ -17,61 +17,67 @@ function AboutMePage() {
   });*/
   let cards = [
     {
-      name: 'React',
-      color: '',
+      name: "React",
+      color: "",
       imgUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
     },
     {
-      name: 'JavaScript',
-      color: '#f7e018',
+      name: "Redux",
+      color: "",
       imgUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png',
+        "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
     },
     {
-      name: 'HTML',
-      color: '',
-      imgUrl: 'https://cdn-icons-png.flaticon.com/512/732/732212.png?w=360',
-    },
-    {
-      name: 'CSS',
-      color: '',
-      imgUrl: 'https://cdn-icons-png.flaticon.com/512/732/732190.png?w=360',
-    },
-    {
-      name: 'SCSS',
-      color: '#cd669a',
+      name: "JavaScript",
+      color: "#f7e018",
       imgUrl:
-        'https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png',
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
     },
     {
-      name: 'Redux',
-      color: '',
+      name: "SCSS",
+      color: "#cd669a",
       imgUrl:
-        'https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg',
+        "https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png",
+    },
+    {
+      name: "HTML",
+      color: "",
+      imgUrl: "https://cdn-icons-png.flaticon.com/512/732/732212.png?w=360",
+    },
+    {
+      name: "CSS",
+      color: "",
+      imgUrl: "https://cdn-icons-png.flaticon.com/512/732/732190.png?w=360",
     },
   ];
   return (
-    <div className={'AboutMe'}>
-      <h1 className='Title' >About Me</h1>
+    <div className={"AboutMe"}>
+      <h1 className="Title">About Me</h1>
       <div className="Text">
         <p>
-          Soy un Estudiante de desarrollo web en busca de nuevos desafíos para
-          ponerme a prueba y aprender nuevas habilidades para crecer como
-          programador y persona. Hice un cursado en Henry donde aprendí a hacer
-          paginas web tanto desde el Frontend como el Backend , y he realizado
-          cursos de desarrollo de videojuegos como hobby porque me divierte
-          programar y crear mundos nuevos con mi imaginación.
+          I am a web development student looking for new challenges for myself and
+          learn new skills to grow as a programmer and person. I took a course
+          at Henry where I learned to do web pages from the Frontend to the
+          Backend, and I have made video game development courses as a hobby
+          because it amuses me programming and creating new worlds with my
+          imagination.
         </p>
       </div>
 
-      <h1 className='Title' >Skills</h1>
-      
+      <h1 className="Title">Skills</h1>
+
       <div className="Tecnologias">
         {
           <div className={"TecnologiasContainer"}>
-            {cards.map((e,index) => {
-              return <TecnologiaCard params={e} key={index} style={{animationDelay:"5s"}} />;
+            {cards.map((e, index) => {
+              return (
+                <TecnologiaCard
+                  params={e}
+                  key={index}
+                  style={{ animationDelay: "5s" }}
+                />
+              );
             })}
           </div>
         }

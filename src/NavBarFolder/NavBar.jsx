@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 export default function NavBar() {
   const [burgerButtonState, setBurgerButtonState] = useState(true);
+  const [navBarState, setNavBarState] = useState("Home");
   return (
     <div className="NavBar">
       <div
@@ -23,22 +24,26 @@ export default function NavBar() {
             >
               <div className={"lineButton"}></div>
             </button>
-          <div className="Links">
-            <Link to="/">
+          <div className="Links" onClick={() => setBurgerButtonState(!burgerButtonState)}>
+            <Link to="/" className={navBarState === "Home" ? "selected" : ""} onClick={() => setNavBarState("Home")}>
+              <img src="./Art/HomeIcon.png" />
               <h1>Home</h1>
             </Link>
 
-            <Link to="/about">
+            <Link to="/about" className={navBarState === "About" ? "selected" : ""} onClick={() => setNavBarState("About")}>
+            <img src="./Art/AboutMeIcon.png" />
               <h1>About</h1>
             </Link>
 
-            <Link to="/projects">
+            <Link to="/projects" className={navBarState === "Projects" ? "selected" : ""} onClick={() => setNavBarState("Projects")}>
+              <img src="./Art/ProjectsIcon.png" />
               <h1>Projects</h1>
             </Link>
             
-            <Link to="/projects">
+            {/*<Link to="/projects">
+              <img src="./Art/ContactMeIcon.png" />
               <h1>Contact Me</h1>
-            </Link>
+            </Link>*/}
             
           </div>
           

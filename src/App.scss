@@ -48,21 +48,13 @@
 }
 @keyframes OpacityAnimNoMovement {
   from {
-    opacity: 0;
+    opacity: 0.3;
   }
   to {
     opacity: 1;
   }
 }
 
-@keyframes DisplayNoneBlock {
-  0% {
-    display: none;
-  }
-  100% {
-    display: block;
-  }
-}
 
 
 .Title  {
